@@ -4,6 +4,7 @@ function setInnerText(id, price) {
 
     return parseInt(cost.innerText);
 }
+
 function updateTotalCost() {
     const price = parseInt(document.getElementById('price').innerText);
     const memoryCost = parseInt(document.getElementById('memory-cost').innerText);
@@ -18,7 +19,7 @@ function updateTotalCost() {
 }
 
 
-
+// for memory cost
 document.getElementById('memory-button-1').addEventListener('click', function () {
     setInnerText('memory-cost', 0);
     updateTotalCost();
@@ -29,6 +30,7 @@ document.getElementById('memory-button-2').addEventListener('click', function ()
 });
 
 
+// for storage cost
 document.getElementById('storage-button-1').addEventListener('click', function () {
     setInnerText('storage-cost', 0);
     updateTotalCost();
@@ -43,6 +45,7 @@ document.getElementById('storage-button-3').addEventListener('click', function (
 });
 
 
+// for delivery cost
 document.getElementById('delivery-button-1').addEventListener('click', function () {
     setInnerText('delivery-cost', 0);
     updateTotalCost();
@@ -52,6 +55,8 @@ document.getElementById('delivery-button-2').addEventListener('click', function 
     updateTotalCost();
 });
 
+
+// for pomo code part
 const button = document.getElementById('pomo-button');
 button.addEventListener('click', function () {
     const getPomoCode = document.getElementById('pomo-input');
