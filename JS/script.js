@@ -52,7 +52,8 @@ document.getElementById('delivery-button-2').addEventListener('click', function 
     updateTotalCost();
 });
 
-document.getElementById('pomo-button').addEventListener('click', function () {
+const button = document.getElementById('pomo-button');
+button.addEventListener('click', function () {
     const getPomoCode = document.getElementById('pomo-input');
     const pomoCode = getPomoCode.value;
     const getTotal = document.getElementById('grand-total');
@@ -60,7 +61,9 @@ document.getElementById('pomo-button').addEventListener('click', function () {
 
     if (pomoCode == 'stevekaku') {
         total = total - (total * 20 / 100);
+        button.setAttribute('disabled', true);
     }
+
     getTotal.innerText = total;
     getPomoCode.value = '';
 
